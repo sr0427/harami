@@ -5,14 +5,26 @@
     <title>JS test</title>
   </head>
   <body>
-    <h1 id="tanaka>JavaScript test</h1>
-    <button onclick="aloha()">CLICK ME!</button>
-    <img id="gazo" src="22.jpg">
+    <h1 id="tanaka">JavaScript test</h1>
+    
+    <img id="gazo" src="22.jpg"onclick="aloha()">
+
+
 
     <script>
+      let num = 0
+      
       function aloha(){
+        const files = ['11.jpg','22.jpg','911.jpg']
+	
+	num++
+
+	if( num >= files.length) {
+          num = 0
+        }
+
         let gazo = document.getElementById('gazo')
-	gazo.src = '22.jpy'
+	gazo.src = files[num]
       }
 
     </script>
